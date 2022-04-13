@@ -20,10 +20,10 @@ rgba_t mandelbrot_color_orange(const int32_t iterations, const int32_t max_itera
     if (iterations == max_iterations)
 		return rgba_black;
 
-	const int32_t v = 765 * iterations / max_iterations;
+    const int32_t v = 765 * iterations / max_iterations;
 	if (v > 510) {
-		const rgba_t color = {.r = 255, .g = 255, .b = (uint8_t)(v % 255), .a = 255,};
-		return color;
+	    const rgba_t color = {.r = 255, .g = 255, .b = (uint8_t)(v % 255), .a = 255,};
+	    return color;
 	}
 	else if (v > 255) {
 		const rgba_t color = {.r = 255, .g = (uint8_t)(v % 255), .b = 0, .a = 255,};
@@ -42,19 +42,19 @@ static int32_t mandelbrot_calculate_number_of_iterations(
 	const double scale, 
 	const int32_t iterations, 
 	const int32_t width, 
-	const int32_t height
+    const int32_t height
 ) {
     const double normalized_x = mandelbrot_normalize_x(x, width, scale) + shift_x / scale;
-	const double normalized_y = mandelbrot_normalize_y(y, height, scale) + shift_y / scale;
+    const double normalized_y = mandelbrot_normalize_y(y, height, scale) + shift_y / scale;
 
-	int32_t iteration = 0;
+    int32_t iteration = 0;
 	for (double r = 0.0, i = 0.0; r * r + i * i <= 2 * 2 && iteration < iterations; ++iteration) {
 		const double r_temp = r * r - i * i + normalized_x;
 		i = 2 * r * i + normalized_y;
-		r = r_temp;
-	}
+	    r = r_temp;
+    }
 
-	return iteration;
+    return iteration;
 }
 
 static double mandelbrot_calculate_scale(const int32_t width, const int32_t height) {

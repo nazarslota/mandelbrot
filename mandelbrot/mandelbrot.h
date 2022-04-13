@@ -1,5 +1,5 @@
-#ifndef _MANDELBROT_H
-#define _MANDELBROT_H
+#ifndef MANDELBROT_H
+#define MANDELBROT_H
 
 #include <stdint.h>
 
@@ -40,4 +40,4 @@ static double mandelbrot_normalize_x(int32_t x, int32_t width, double scale);
 
 static double mandelbrot_normalize_y(int32_t y, int32_t height, double scale);
 
-#endif // !_MANDELBROT_H
+#endif // !MANDELBROT_H
