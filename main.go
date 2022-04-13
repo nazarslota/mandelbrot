@@ -6,7 +6,6 @@ import (
 	"mandelbrot/mandelbrot"
 )
 
-// Pixel window width and height.
 const (
 	WindowWidth  = 960
 	WindowHeight = 600
@@ -18,9 +17,8 @@ func main() {
 
 func run() {
 	cfg := pixelgl.WindowConfig{
-		Title:       "Mandelbrot Set",
-		Bounds:      pixel.R(0, 0, WindowWidth, WindowHeight),
-		AlwaysOnTop: true,
+		Title:  "Mandelbrot Set",
+		Bounds: pixel.R(0, 0, WindowWidth, WindowHeight),
 	}
 
 	win, err := pixelgl.NewWindow(cfg)
