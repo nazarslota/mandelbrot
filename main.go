@@ -29,17 +29,17 @@ func run() {
 	set := mandelbrot.New(WindowWidth, WindowHeight)
 	for !win.Closed() {
 		switch {
-		case win.JustPressed(pixelgl.KeyW):
+		case win.Pressed(pixelgl.KeyW):
 			set.ShiftUp()
-		case win.JustPressed(pixelgl.KeyS):
+		case win.Pressed(pixelgl.KeyS):
 			set.ShiftDown()
-		case win.JustPressed(pixelgl.KeyA):
+		case win.Pressed(pixelgl.KeyA):
 			set.ShiftLeft()
-		case win.JustPressed(pixelgl.KeyD):
+		case win.Pressed(pixelgl.KeyD):
 			set.ShiftRight()
-		case win.JustPressed(pixelgl.KeyLeftShift):
+		case win.Pressed(pixelgl.KeyLeftShift):
 			set.ZoomIn()
-		case win.JustPressed(pixelgl.KeyLeftControl):
+		case win.Pressed(pixelgl.KeyLeftControl):
 			set.ZoomOut()
 		}
 
