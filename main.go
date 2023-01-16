@@ -7,8 +7,8 @@ import (
 )
 
 const (
-	WindowWidth  = 960
-	WindowHeight = 600
+	WindowWidth  = 1280
+	WindowHeight = 720
 )
 
 func main() {
