@@ -7,19 +7,13 @@ which was something new for me at that time.
 
 ## Run
 
-In order to run this project, you need to install [Go](https://go.dev/dl/) and
-the [Pixel](https://github.com/faiface/pixel) library (Be especially careful when installing C libraries).
+```
+go mod download
+```
 
-## Usage
-
-You can use the following keys to navigate through the set.
-
-- **W** - up.
-- **S** - down.
-- **A** - left.
-- **D** - right.
-- **Left Shift** - increase the set.
-- **Left Control** - reduce the set.
+```
+go run ./main.go
+```
 
 ## Appearance
 
